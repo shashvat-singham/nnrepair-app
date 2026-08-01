@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Tooling / editor
+.claude/
+.idea/
+.vscode/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
