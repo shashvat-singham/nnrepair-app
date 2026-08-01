@@ -3,7 +3,19 @@
 An interactive companion to the NNRepair artifact, plus a Python port of its
 Java implementation.
 
-Deployed on Streamlit Community Cloud.
+**Live: https://nnrepair.streamlit.app**
+
+Deploys to Streamlit Community Cloud from
+[shashvat-singham/nnrepair-app](https://github.com/shashvat-singham/nnrepair-app),
+a split-out copy of this directory that avoids cloning the 954 MB of research
+data in the parent repository.
+
+> **Python 3.14 note.** Streamlit Community Cloud builds on Python 3.14, where
+> Altair 5.5 fails to import: it guards its PEP 728 `TypedDict`s with
+> `sys.version_info >= (3, 14)`, expecting `closed=True` to have reached the
+> stdlib `typing` module in that release. It did not, so that branch raises
+> `TypeError` at import. `requirements.txt` therefore floors Altair at 6.2.2,
+> which moved the guard to `>= (3, 15)`. Do not cap it below 6 again.
 
 ## Running it
 
